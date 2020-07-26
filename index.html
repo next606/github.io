@@ -9,10 +9,14 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/jquery.formstyler.css" />
-    <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
-    <link rel="stylesheet" href="/css/style.css" />
     
+    <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="/css/jquery.formstyler.css" />
+    <!-- <link rel="stylesheet" href="/css/magnific-popup.css"> -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/photoswipe.css">
+    <link rel="stylesheet" href="/css/default-skin/default-skin.css">
+
     <title>Твой каркасный дом</title>
   </head>
   <body>
@@ -34,31 +38,31 @@
               <ul class="header__list">
                 <li class="header__item">
                   <a
-                    href="#articles"
-                    class="header__link header__link-active js-scroll"
+                    href="#about"
+                    class="header__link  js-scroll"
                     >О нас</a
                   >
                 </li>
                 <li class="header__item">
-                  <a href="#locations" class="header__link js-scroll">
+                  <a href="#work" class="header__link js-scroll">
                     Схема работы</a
                   >
                 </li>
                 <li class="header__item">
-                  <a href="#videos" class="header__link js-scroll">Проекты</a>
+                  <a href="#project" class="header__link js-scroll">Проекты</a>
                 </li>
                 <li class="header__item">
-                  <a href="#sign-in" class="header__link js-scroll"
+                  <a href="#advantages" class="header__link js-scroll"
                     >Преимущества</a
                   >
                 </li>
                 <li class="header__item">
-                  <a href="#sign-in" class="header__link js-scroll"
+                  <a href="#faq" class="header__link js-scroll"
                     >Ответы на вопросы</a
                   >
                 </li>
                 <li class="header__item">
-                  <a href="#sign-in" class="header__link js-scroll">Контакты</a>
+                  <a href="#contacts" class="header__link js-scroll">Контакты</a>
                 </li>
               </ul>
 
@@ -85,8 +89,13 @@
           <h1 class="intro__title">
             Строительство каркасных домов
           </h1>
-          <a class="intro__video" href="#!">
+          
+          <a class="intro__video" data-fancybox href="https://www.youtube.com/watch?v=7B0PzFfulAE">
+
             <div class="intro__video-arrow">
+
+              
+
               <svg
                 width="70"
                 height="70"
@@ -108,7 +117,7 @@
     </section>
 
     <!-- about -->
-    <div class="about">
+    <div class="about" id="about">
       <div class="wrapper">
         <div class="about__inner">
           <div class="about__inner-content">
@@ -135,7 +144,7 @@
                 разработаем уникальный проект с учетом всех Ваших пожеланий.
               </p>
             </div>
-            <a class="about__btn" href="#!">Получить бесплатную консультацию</a>
+             <a class="about__btn js-scroll2"  href="#about-btn">Получить бесплатную консультацию</a>
           </div>
           <div class="about__inner-img">
             <img src="/images/Rectangle 8.png" alt="" />
@@ -145,12 +154,13 @@
     </div>
 
     <!-- work -->
-    <section class="work">
+    <section class="work" id="work">
       <div class="wrapper">
         <h2 class="work__title title">Как мы работаем</h2>
         <div class="work__inner">
           <div class="work__item">
             <div class="work__item-circle"></div>
+            <div class="work__item-block">
             <div class="work__item-img">
               <img src="/images/svg/Frame.svg" alt="Шаг 1" />
             </div>
@@ -159,8 +169,10 @@
               Оставляете заявку или звоните нам.
             </p>
           </div>
+          </div>
           <div class="work__item">
             <div class="work__item-circle"></div>
+            <div class="work__item-block">
             <div class="work__item-img">
               <img src="/images/svg/Frame11.svg" alt="" />
             </div>
@@ -170,8 +182,10 @@
               нюансы.
             </p>
           </div>
+          </div>
           <div class="work__item">
             <div class="work__item-circle"></div>
+            <div class="work__item-block">
             <div class="work__item-img">
               <img src="/images/svg/Frame3.svg" alt="" />
             </div>
@@ -180,8 +194,10 @@
               Составляем смету. Согласовываем, утверждаем и заключаем договор.
             </p>
           </div>
+          </div>
           <div class="work__item">
             <div class="work__item-circle"></div>
+            <div class="work__item-block">
             <div class="work__item-img">
               <img src="/images/svg/Frame4.svg" alt="" />
             </div>
@@ -190,8 +206,10 @@
               Начинаем строительство. Без предоплат за невыполненную работу.
             </p>
           </div>
+          </div>
           <div class="work__item">
             <div class="work__item-circle"></div>
+            <div class="work__item-block">
             <div class="work__item-img">
               <img src="/images/svg/Frame5.svg" alt="" />
             </div>
@@ -200,35 +218,148 @@
               Подписываем акт. Окончательный расчёт и передача ключей.
             </p>
           </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- project -->
+    <!-- project gallery -->
 
-   
-
-
-    
-    <section class="project">
+    <section class="project" id="project">
       <div class="wrapper">
         <h2 class="project__title title">Последние выполненные проекты</h2>
         <div class="project__gallery">
-          <div class="popup-gallery">
-      <a class="gallery" href="https://www.ejin.ru/wp-content/uploads/2019/05/gora-22.jpg"><img src="/images/DSC_0008 2.jpg" width="75" height="75"></a>
-      <a class="gallery" href="https://www.ejin.ru/wp-content/uploads/2019/05/gora-22.jpg" ><img src="/images/DSC_0012-1.jpg" width="75" height="75"></a>
-      <a class="gallery" href="https://www.ejin.ru/wp-content/uploads/2019/05/gora-22.jpg" ><img src="/images/DSC_0057.jpg" width="75" height="75"></a>
-      <a class="gallery" href="https://www.ejin.ru/wp-content/uploads/2019/05/gora-22.jpg"><img src="/images/DSC_0061.jpg" width="75" height="75"></a>
-      <a class="gallery" href="https://www.ejin.ru/wp-content/uploads/2019/05/gora-22.jpg" ><img src="/images/DSC_0096.JPG" width="75" height="75"></a>
-      <a class="gallery" href="https://www.ejin.ru/wp-content/uploads/2019/05/gora-22.jpg" ><img src="/images/DSC_00971.jpg" width="75" height="75"></a>
-           
-    </div>
+            <div class="project__gallery-left">
+                  <a class="gallery" href="/images/project1-big.jpg" data-fancybox="images"><img class="img-big" src="/images/project1.jpg"></a>
+                  <a class="gallery" href="/images/project2.jpg" data-fancybox="images" ><img class="img-small"  src="/images/project2.jpg"></a>
+                  <a class="gallery" href="/images/project3.jpg" data-fancybox="images" ><img class="img-small"  src="/images/project3.jpg"></a>
+            </div>
+            <div class="project__gallery-right">
+                  
+                  <a class="gallery" href="/images/project4.jpg" data-fancybox="images"><img class="img-small"  src="/images/project4.jpg"></a>
+                  <a class="gallery" href="/images/project5.jpg" data-fancybox="images" ><img class="img-small"  src="/images/project5.jpg"></a>
+                  <a class="gallery" href="/images/project6.jpg" data-fancybox="images" ><img class="img-big" src="/images/project6.jpg"></a>
+            </div>
+          
         </div>
       </div>
     </section>
 
+
+
+    <!-- photoswipe -->
+
+
+    <section class="project" id="project">
+      <div class="wrapper">
+        <h2 class="project__title title">photoswipe</h2>
+        <div class="project__gallery">
+              
+            <div class="picture three cf " itemscope itemtype="http://schema.org/ImageGallery">
+              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="/images/project1-big.jpg" itemprop="contentUrl" data-size="1000x667">
+                        <img src="/images/project1.jpg" height="400" width="600" itemprop="thumbnail" alt="Beach">
+                </a>
+              </figure>
+              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="/images/project2.jpg" itemprop="contentUrl" data-size="1000x667">
+                        <img src="/images/project2.jpg" height="400" width="600" itemprop="thumbnail" alt="Beach">
+                </a>
+              </figure>
+              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a href="/images/project3.jpg" itemprop="contentUrl" data-size="1000x667">
+                        <img src="/images/project3.jpg" height="400" width="600" itemprop="thumbnail" alt="Beach">
+                </a>
+              </figure>
+             
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                  <a href="/images/project4-big.jpg" itemprop="contentUrl" data-size="1000x667">
+                          <img src="/images/project4.jpg" height="400" width="600" itemprop="thumbnail" alt="Beach">
+                  </a>
+                </figure>
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                  <a href="/images/project5.jpg" itemprop="contentUrl" data-size="1000x667">
+                          <img src="/images/project5.jpg" height="400" width="600" itemprop="thumbnail" alt="Beach">
+                  </a>
+                </figure>
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                  <a href="/images/project6.jpg" itemprop="contentUrl" data-size="1000x667">
+                          <img src="/images/project6.jpg" height="400" width="600" itemprop="thumbnail" alt="Beach">
+                  </a>
+                </figure>
+                  
+          
+        </div>
+      </div>
+    </section>
+
+
+    
+  </div>
+  
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  
+      <div class="pswp__bg"></div>
+      <div class="pswp__scroll-wrap">
+  
+          <div class="pswp__container">
+              <div class="pswp__item"></div>
+              <div class="pswp__item"></div>
+              <div class="pswp__item"></div>
+          </div>
+  
+          <div class="pswp__ui pswp__ui--hidden">
+  
+              <div class="pswp__top-bar">
+  
+                  <div class="pswp__counter"></div>
+  
+                  <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                  <button class="pswp__button pswp__button--share" title="Share"></button>
+                  <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                  <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+  
+                  <div class="pswp__preloader">
+                      <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                          <div class="pswp__preloader__donut"></div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+  
+              <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                  <div class="pswp__share-tooltip"></div> 
+              </div>
+  
+              <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+              </button>
+  
+              <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+              </button>
+  
+              <div class="pswp__caption">
+                  <div class="pswp__caption__center"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- contact -->
-    <section class="contact">
+     <section class="contact" id="about-btn">
       <div class="wrapper">
         <h2 class="contact__title title">
           Оставьте заявку и мы свяжемся с вами
@@ -237,6 +368,7 @@
         <div class="contact__forms">
           <form action="#" method="post" name="form">
             <div class="form">
+              
               <input
                 class="name"
                 name="name"
@@ -251,15 +383,21 @@
                 placeholder="Введите номер телефона"
               />
 
-              <input class="submit" type="submit" value="ОСтавить заявку" />
+              <a  class="submit" data-fancybox data-animation-duration="700" data-src="#animatedModal" href="javascript:;">ОСтавить заявку</a>
+              <div style="display: none;" id="animatedModal" class="animated-modal">
+                <h2 class="submit__title">Ваша заявка принята!</h2>
+                <p class="submit__text">Мы перезвоним Вам в течение 1 часа.</p>
+              </div>
+              <!-- <input class="submit" 
+               type="submit" value="ОСтавить заявку" /> -->
             </div>
           </form>
         </div>
       </div>
-    </section>
+    </section> 
 
     <!-- advantages -->
-    <section class="advantages">
+    <section class="advantages" id="advantages">
       <div class="wrapper">
         <div class="advantages__title title">Наши преимущества</div>
         <div class="advantages__inner">
@@ -271,11 +409,11 @@
                 alt="Качество"
                 class="advantages__img"
               />
-              <div class="advantages__item-title title-small">Качество</div>
-              <div class="advantages__item-text text">
+              <h3 class="advantages__item-title title-small">Качество</h3>
+              <p class="advantages__item-text text">
                 Квалифицированные консультации. Профессиональный подход к делу.
                 Высокое качество исполнения работы.
-              </div>
+              </p>
             </div>
           </div>
           <div class="advantages__item">
@@ -286,13 +424,13 @@
                 alt="Ответственность"
                 class="advantages__img"
               />
-              <div class="advantages__item-title title-small">
+              <h3 class="advantages__item-title title-small">
                 Ответственность
-              </div>
-              <div class="advantages__item-text text">
+              </h3>
+              <p class="advantages__item-text text">
                 Предоставляем гарантии по договору. Имеем все разрешения для
                 осуществления строительной деятельности на территории РФ.
-              </div>
+              </p>
             </div>
           </div>
           <div class="advantages__item">
@@ -303,11 +441,11 @@
                 alt="Опыт"
                 class="advantages__img"
               />
-              <div class="advantages__item-title title-small">Опыт</div>
-              <div class="advantages__item-text text">
+              <h3 class="advantages__item-title title-small">Опыт</h3>
+              <p class="advantages__item-text text">
                 Более 10 лет в каркасном строительстве. Готовы поделится своими
                 знаниями в работе с Вами.
-              </div>
+              </p>
             </div>
           </div>
           <div class="advantages__item">
@@ -318,11 +456,11 @@
                 alt="Выгода"
                 class="advantages__img"
               />
-              <div class="advantages__item-title title-small">Выгода</div>
-              <div class="advantages__item-text text">
+              <h3 class="advantages__item-title title-small">Выгода</h3>
+              <p class="advantages__item-text text">
                 Сжатые сроки. Гибкая цена. Скидки и рассрочка на индивидуальных
                 условиях.
-              </div>
+              </p>
             </div>
           </div>
         </div>
@@ -330,7 +468,7 @@
     </section>
 
     <!-- faq -->
-    <div class="faq">
+    <div class="faq" id="faq">
       <div class="wrapper">
         <div class="accordion">
           <h2 class="accordion__title title">
@@ -404,7 +542,7 @@
     </div>
 
     <!-- our-contacts -->
-    <section class="our-contacts">
+    <section class="our-contacts" id="contacts">
       <div class="wrapper">
         <h2 class="our-contacts__title title">Наши Контакты</h2>
         <div class="our-contacts__inner">
@@ -454,6 +592,14 @@
       </div>
     </section>
 
+
+
+
+
+
+
+<!-- footer -->
+
     <footer class="footer">
       <div class="wrapper">
         <div class="footer__inner">
@@ -480,9 +626,16 @@
     </footer>
 
 
-    <!-- <script src="/js/jquery.formstyler.min.js"></script> -->
+
+
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="magnific-popup/jquery.magnific-popup.js"></script>
+    <script src="/js/photoswipe.min.js"></script>
+    <script src="/js/photoswipe-ui-default.min.js"></script>
+    <script src="/js/pace.min.js"></script>
+    <script src="/js/jquery.fancybox.min.js"></script>
+    <!-- <script src="/js/jquery.formstyler.min.js"></script> -->
+    <!-- <script src="/js/jquery.magnific-popup.min.js"></script> -->
     <script src="/js/main.js"></script>
   </body>
 </html>
