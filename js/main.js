@@ -1,5 +1,5 @@
 /* header active */
-/* let elements = document.getElementsByClassName("header__item");
+let elements = document.getElementsByClassName("header__item");
 
     for (var i = 0; i < elements.length; i++){
         elements[i].onclick = function () {
@@ -10,23 +10,23 @@
             }
             this.classList.add("header__link-active");
         }
-    } */
+    }
 
   /* accordion */
   
- /*  $(document).ready(function () {
+  $(document).ready(function () {
     $(".accordion__item-title").click(function () {
       $(this)
         .toggleClass("show")
         .next(".accordion__text")
         .slideToggle(200);
     });
-  }); */
+  });
 
 
 
 /* header */
-/* (function(){
+(function(){
     const header = document.querySelector('.header');
     window.onscroll = () => {
         if(window.pageYOffset > 70){
@@ -36,11 +36,11 @@
           header.classList.remove('header__active');
         }
     };
-}()); */
+}());
 
  /* burger  */
 
-/* (function(){
+(function(){
     const burgerItem = document.querySelector('.burger');
     const menu = document.querySelector('.header__nav-box')
     const menuCloseItem = document.querySelector('.header__nav-close');
@@ -58,7 +58,7 @@
           });
       }
   }
-}()); */
+}());
 
 
 
@@ -67,7 +67,7 @@
 /* gallery */
 
 
-/* $('.project__gallery').magnificPopup({
+$('.project__gallery').magnificPopup({
   delegate: 'a',
   type: 'image',
   tLoading: 'Loading image #%curr%...',
@@ -83,11 +83,11 @@
       return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
     }
   }
-}); */
+});
 
 
 // Scroll to anchors main
-/* (function () {
+(function () {
 
   const smoothScroll = function (targetEl, duration) {
       const headerElHeight =  document.querySelector('.header').clientHeight;
@@ -124,11 +124,11 @@
       });
   };
   scrollTo();
-}()); */
+}());
 
 /* Scroll to anchors small */
 
-/* (function () {
+(function () {
 
   const smoothScroll = function (targetEl, duration) {
       const headerElHeight =  document.querySelector('.header').clientHeight;
@@ -165,7 +165,7 @@
       });
   };
   scrollTo();
-}()); */
+}());
 
 /* video */
 
@@ -214,7 +214,7 @@ $(document).ready(function() {
 
 
 /* contact form */
-/* $(document).ready(function() {
+$(document).ready(function() {
 	$('.submit').magnificPopup({
 		type: 'inline',
 
@@ -231,7 +231,7 @@ $(document).ready(function() {
 		mainClass: 'my-mfp-zoom-in'
 	});
 
-}); */
+});
 
 
 

@@ -387,7 +387,7 @@ body {
   margin: 0;
   padding: 0;
   padding-left: 40px;
-  padding-right: 35px;
+  padding-right: 40px;
   margin-bottom: 115px;
 }
 .project__gallery-left {
@@ -398,7 +398,7 @@ body {
       flex-wrap: wrap;
   /* width: 50%; */
 
-  /* margin-right: 5px; */
+  /* margin-left: 25px; */
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
@@ -421,7 +421,7 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   /* width: 50%; */
-  margin-right: 5px;
+  /* margin-right: 25px; */
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
@@ -469,6 +469,7 @@ body {
   color: #000;
 
   margin-right: 85px;
+  margin-bottom: 20px;
 }
 
 input.name::-webkit-input-placeholder {
