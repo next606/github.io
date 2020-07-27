@@ -40,7 +40,7 @@ let elements = document.getElementsByClassName("header__item");
 
  /* burger  */
 
-/* (function(){
+(function(){
     const burgerItem = document.querySelector('.burger');
     const menu = document.querySelector('.header__nav-box')
     const menuCloseItem = document.querySelector('.header__nav-close');
@@ -58,7 +58,10 @@ let elements = document.getElementsByClassName("header__item");
           });
       }
   }
-}()); */
+}());
+
+
+
 
 
 /* gallery */
@@ -128,7 +131,7 @@ let elements = document.getElementsByClassName("header__item");
 (function () {
 
   const smoothScroll = function (targetEl, duration) {
-      const headerElHeight =  document.querySelector('.about__btn').clientHeight;
+      const headerElHeight =  document.querySelector('.contact').clientHeight;
       let target = document.querySelector(targetEl);
       let targetPosition = target.getBoundingClientRect().top - headerElHeight;
       let startPosition = window.pageYOffset;
@@ -172,8 +175,52 @@ $('.card-deck a').fancybox({
     }
   });
 
+
+
+
+
+  /* progect gallery */
+
+$("[data-fancybox]").fancybox({
+// Скорость анимации
+speed : 330,
+// Бесконечная прокрутка галереи
+loop : true,
+
+});
+
+
+/* contact form */
+
+
+
+
+$(document).ready(function() {
+	$('.submit').magnificPopup({
+		type: 'inline',
+
+		fixedContentPos: false,
+		fixedBgPos: true,
+
+		overflowY: 'auto',
+
+		closeBtnInside: true,
+		preloader: false,
+		
+		midClick: true,
+		removalDelay: 300,
+		mainClass: 'my-mfp-zoom-in'
+	});
+
+});
+
+
+
+
+
+
 /* photoswipe */
-(function($) {
+/* (function($) {
   var $pswp = $('.pswp')[0];
   var image = [];
 
@@ -219,5 +266,5 @@ $('.card-deck a').fancybox({
           lightBox.init();
       });
   });
-})(jQuery);
+})(jQuery); */
 
