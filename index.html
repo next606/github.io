@@ -24,7 +24,7 @@
           <div class="header__logo">
             <a href="/" class="header__logo-link">
               <img
-                src="/images/logo-min.png"
+                src="/images/logo.svg"
                 alt="Твой каркасный дом"
                 class="header__logo-pic"
               />
@@ -270,105 +270,7 @@
       </div>
     </section>
 
-    <!-- photoswipe -->
-
-    <!--  <section class="project" id="project">
-      <div class="wrapper">
-        <h2 class="project__title title">photoswipe</h2>
-        <div class="project__gallery">
-              
-            <div class="picture three cf " itemscope itemtype="http://schema.org/ImageGallery">
-              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                <a href="/images/project1-big.jpg" itemprop="contentUrl" data-size="1000x667">
-                        <img src="/images/project1.jpg" height="400" width="600" itemprop="thumbnail" alt="Beach">
-                </a>
-              </figure>
-              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                <a href="/images/project2.jpg" itemprop="contentUrl" data-size="1000x667">
-                        <img src="/images/project2.jpg" height="400" width="600" itemprop="thumbnail" alt="Beach">
-                </a>
-              </figure>
-              <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                <a href="/images/project3.jpg" itemprop="contentUrl" data-size="1000x667">
-                        <img src="/images/project3.jpg" height="400" width="600" itemprop="thumbnail" alt="Beach">
-                </a>
-              </figure>
-             
-                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                  <a href="/images/project4-big.jpg" itemprop="contentUrl" data-size="1000x667">
-                          <img src="/images/project4.jpg" height="400" width="600" itemprop="thumbnail" alt="Beach">
-                  </a>
-                </figure>
-                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                  <a href="/images/project5.jpg" itemprop="contentUrl" data-size="1000x667">
-                          <img src="/images/project5.jpg" height="400" width="600" itemprop="thumbnail" alt="Beach">
-                  </a>
-                </figure>
-                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                  <a href="/images/project6.jpg" itemprop="contentUrl" data-size="1000x667">
-                          <img src="/images/project6.jpg" height="400" width="600" itemprop="thumbnail" alt="Beach">
-                  </a>
-                </figure>
-                  
-          
-        </div>
-      </div>
-    </section>
-
-
-    
-  </div>
-  
-  
-  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-  
-      <div class="pswp__bg"></div>
-      <div class="pswp__scroll-wrap">
-  
-          <div class="pswp__container">
-              <div class="pswp__item"></div>
-              <div class="pswp__item"></div>
-              <div class="pswp__item"></div>
-          </div>
-  
-          <div class="pswp__ui pswp__ui--hidden">
-  
-              <div class="pswp__top-bar">
-  
-                  <div class="pswp__counter"></div>
-  
-                  <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-                  <button class="pswp__button pswp__button--share" title="Share"></button>
-                  <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-                  <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-  
-                  <div class="pswp__preloader">
-                      <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                          <div class="pswp__preloader__donut"></div>
-                        </div>
-                      </div>
-                  </div>
-              </div>
-  
-              <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                  <div class="pswp__share-tooltip"></div> 
-              </div>
-  
-              <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-              </button>
-  
-              <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-              </button>
-  
-              <div class="pswp__caption">
-                  <div class="pswp__caption__center"></div>
-              </div>
-          </div>
-      </div>
-  </div>
-
- -->
+   
 
     <!-- contact -->
     <section class="contact" id="about-btn">
@@ -378,8 +280,35 @@
         </h2>
 
         <div class="contact__forms">
-          <form action="#" method="post" name="form">
+          <!-- <form>
+
+            
+        
+            <input
+                class="name"
+                name="name"
+                type="text" 
+                placeholder="Введите ваше имя"
+              />
+
+              <input
+                class="phone"
+                name="phone"
+                type="text" 
+                placeholder="Введите номер телефона"
+              />
+
+              <button class="submit" href="#small-dialog" type="submit">ОСтавить заявку</button>
+        
+          </form> -->
+          <form action="#" method="post" name="form" >
+            
             <div class="form">
+              <!-- Hidden Required Fields -->
+            <input type="hidden" name="project_name" value="Твой каркасный дом">
+            <input type="hidden" name="admin_email" value="next606@mail.ru">
+            <input type="hidden" name="form_subject" value="Form Subject">
+            <!-- END Hidden Required Fields -->
               <input
                 class="name"
                 name="name"
@@ -394,7 +323,9 @@
                 placeholder="Введите номер телефона"
               />
 
-              <a class="submit" href="#small-dialog">ОСтавить заявку</a>
+              <button class="submit" href="#small-dialog" type="submit">ОСтавить заявку</button>
+              <!-- <a class="submit" href="#small-dialog">ОСтавить заявку</a> -->
+
               <div class="hidden">
                 <div class="submit__popup zoom-anim-dialog mfp-hide" id="small-dialog">
                   <h2 class="submit__title">Ваша заявка принята!</h2>
@@ -623,7 +554,7 @@
             <a href="/" class="footer__logo-link">
               <img
                 class="footer__logo-pic"
-                src="/images/logo-min.png"
+                src="/images/logo.svg"
                 alt="Твой каркасный дом"
               />
             </a>
