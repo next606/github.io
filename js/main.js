@@ -1,5 +1,5 @@
 /* header active */
-let elements = document.getElementsByClassName("header__item");
+/* let elements = document.getElementsByClassName("header__item");
 
     for (var i = 0; i < elements.length; i++){
         elements[i].onclick = function () {
@@ -10,23 +10,23 @@ let elements = document.getElementsByClassName("header__item");
             }
             this.classList.add("header__link-active");
         }
-    }
+    } */
 
   /* accordion */
   
-  $(document).ready(function () {
+ /*  $(document).ready(function () {
     $(".accordion__item-title").click(function () {
       $(this)
         .toggleClass("show")
         .next(".accordion__text")
         .slideToggle(200);
     });
-  });
+  }); */
 
 
 
 /* header */
-(function(){
+/* (function(){
     const header = document.querySelector('.header');
     window.onscroll = () => {
         if(window.pageYOffset > 70){
@@ -36,11 +36,11 @@ let elements = document.getElementsByClassName("header__item");
           header.classList.remove('header__active');
         }
     };
-}());
+}()); */
 
  /* burger  */
 
-(function(){
+/* (function(){
     const burgerItem = document.querySelector('.burger');
     const menu = document.querySelector('.header__nav-box')
     const menuCloseItem = document.querySelector('.header__nav-close');
@@ -58,7 +58,7 @@ let elements = document.getElementsByClassName("header__item");
           });
       }
   }
-}());
+}()); */
 
 
 
@@ -87,7 +87,7 @@ let elements = document.getElementsByClassName("header__item");
 
 
 // Scroll to anchors main
-(function () {
+/* (function () {
 
   const smoothScroll = function (targetEl, duration) {
       const headerElHeight =  document.querySelector('.header').clientHeight;
@@ -124,11 +124,11 @@ let elements = document.getElementsByClassName("header__item");
       });
   };
   scrollTo();
-}());
+}()); */
 
 /* Scroll to anchors small */
 
-(function () {
+/* (function () {
 
   const smoothScroll = function (targetEl, duration) {
       const headerElHeight =  document.querySelector('.header').clientHeight;
@@ -165,7 +165,7 @@ let elements = document.getElementsByClassName("header__item");
       });
   };
   scrollTo();
-}());
+}()); */
 
 /* video */
 
@@ -186,6 +186,29 @@ $("[data-fancybox]").fancybox({
 speed : 330,
 // Бесконечная прокрутка галереи
 loop : true,
+
+});
+
+/* send form */
+
+$(document).ready(function() {
+
+	//E-mail Ajax Send
+	$("form").submit(function() { //Change
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "mail.php", //Change
+			data: th.serialize()
+		}).done(function() {
+			alert("Thank you!");
+			setTimeout(function() {
+				// Done Functions
+				th.trigger("reset");
+			}, 1000);
+		});
+		return false;
+	});
 
 });
 
@@ -211,28 +234,7 @@ loop : true,
 }); */
 
 
-/* send form */
 
-$(document).ready(function() {
-
-	//E-mail Ajax Send
-	$("form").submit(function() { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize()
-		}).done(function() {
-			alert("Thank you!");
-			setTimeout(function() {
-				// Done Functions
-				th.trigger("reset");
-			}, 1000);
-		});
-		return false;
-	});
-
-});
 
 
 
