@@ -131,7 +131,7 @@ let elements = document.getElementsByClassName("header__item");
 (function () {
 
   const smoothScroll = function (targetEl, duration) {
-      const headerElHeight =  document.querySelector('.contact').clientHeight;
+      const headerElHeight =  document.querySelector('.header').clientHeight;
       let target = document.querySelector(targetEl);
       let targetPosition = target.getBoundingClientRect().top - headerElHeight;
       let startPosition = window.pageYOffset;
@@ -191,7 +191,7 @@ loop : true,
 
 
 /* contact form */
-$(document).ready(function() {
+/* $(document).ready(function() {
 	$('.submit').magnificPopup({
 		type: 'inline',
 
@@ -208,7 +208,7 @@ $(document).ready(function() {
 		mainClass: 'my-mfp-zoom-in'
 	});
 
-});
+}); */
 
 
 /* send form */
