@@ -64,26 +64,7 @@ let elements = document.getElementsByClassName("header__item");
 
 
 
-/* gallery */
 
-
-$('.project__gallery').magnificPopup({
-  delegate: 'a',
-  type: 'image',
-  tLoading: 'Loading image #%curr%...',
-  mainClass: 'mfp-img-mobile',
-  gallery: {
-    enabled: true,
-    navigateByImgClick: true,
-    preload: [0,1] 
-  },
-  image: {
-    tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-    titleSrc: function(item) {
-      return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
-    }
-  }
-});
 
 
 // Scroll to anchors main
@@ -182,9 +163,9 @@ $('.card-deck a').fancybox({
   /* progect gallery */
 
 $("[data-fancybox]").fancybox({
-// Скорость анимации
+
 speed : 330,
-// Бесконечная прокрутка галереи
+
 loop : true,
 
 });
@@ -193,17 +174,17 @@ loop : true,
 
 $(document).ready(function() {
 
-	//E-mail Ajax Send
-	$("form").submit(function() { //Change
+	
+	$("form").submit(function() { 
 		var th = $(this);
 		$.ajax({
 			type: "POST",
-			url: "mail.php", //Change
+			url: "mail.php", 
 			data: th.serialize()
 		}).done(function() {
 			alert("Thank you!");
 			setTimeout(function() {
-				// Done Functions
+				
 				th.trigger("reset");
 			}, 1000);
 		});
