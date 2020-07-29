@@ -943,9 +943,15 @@ input.phone::placeholder {
 }
 .our-contacts__item-title {
   margin-bottom: 25px;
+  
 }
-a.our-contacts__item-text:hover {
-  text-decoration: underline;
+.our-contacts__item-text span{
+  border-bottom: 1px solid #ffc32d;
+  transition: all 0.3s;
+}
+a.our-contacts__item-text:hover span {
+  color: #ffc32d;
+  transition: all 0.3s;
 }
 
 /* footer */
@@ -1851,8 +1857,14 @@ opacity: 0.93;
   .our-contacts__item-title {
     margin-bottom: 10px;
   }
-  a.our-contacts__item-text:hover {
-    text-decoration: underline;
+
+  .our-contacts__item-text span{
+    border-bottom: 1px solid #ffc32d;
+    transition: all 0.3s;
+  }
+  a.our-contacts__item-text:hover span {
+    color: #ffc32d;
+    transition: all 0.3s;
   }
 }
 
