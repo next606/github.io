@@ -150,11 +150,22 @@ let elements = document.getElementsByClassName("header__item");
 
 /* video */
 
-$('.card-deck a').fancybox({
+$('[data-fancybox]').fancybox({
+	protect: true
+});
+
+
+
+
+
+
+/* ----- */
+
+/* $('.card-deck a').fancybox({
     caption : function( instance, item ) {
       return $(this).parent().find('.card-text').html();
     }
-  });
+  }); */
 
 
 
@@ -241,7 +252,7 @@ $(".bt-mask-it").click(function(){
 
 /* footer policy */
 
-/* $(document).ready(function() {
+$(document).ready(function() {
 	$('.footer__text').magnificPopup({
 		type: 'inline',
 
@@ -259,9 +270,6 @@ $(".bt-mask-it").click(function(){
 	});
 
 });
-
-
-
 
 var modal = document.getElementById("myModal");
 
@@ -286,7 +294,7 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}  */
+} 
 
 
 

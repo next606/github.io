@@ -5,6 +5,7 @@
           box-sizing: border-box;
 }
 a {
+  font-family: "Montserrat", sans-serif;
   text-decoration: none;
   color: #615f5f;
 }
@@ -144,7 +145,7 @@ body {
 .header__burger {
   display: none;
   width: 40px;
-  height: 28px;
+  height: 24px;
   position: relative;
   margin-right: 10px;
 }
@@ -169,7 +170,7 @@ display: block;
 .burger__line {
   display: block;
   width: 100%;
-  height: 3px;
+  height: 2px;
   background-color: #fff;
   position: absolute;
   left: 0;
@@ -306,6 +307,7 @@ display: block;
   padding: 30px 48px;
   background: #ffc32d;
   text-align: center;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -599,6 +601,7 @@ display: block;
   background: transparent;
   border-bottom: 2px solid rgba(246, 246, 246, 0.5);
   padding: 7px;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 24px;
@@ -634,6 +637,7 @@ input.name::placeholder {
   background: transparent;
   border-bottom: 2px solid rgba(246, 246, 246, 0.5);
   padding: 7px;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 24px;
@@ -661,6 +665,7 @@ input.phone::placeholder {
 }
 .submit {
   text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
@@ -682,7 +687,7 @@ input.phone::placeholder {
   transition: all 0.3s ease-in-out;
 }
 
-.submit__title {
+/* .submit__title {
   font-weight: 600;
   font-size: 36px;
   line-height: 44px;
@@ -701,7 +706,7 @@ input.phone::placeholder {
   color: 000;
   text-align: center;
   margin-bottom: 80px;
-}
+} */
 
 
 
@@ -1048,6 +1053,7 @@ a.footer__social:last-child{
   height: 500px;
 }
 .error__inner-title {
+  font-family: Montserrat;
   font-style: normal;
   font-weight: 600;
   font-size: 36px;
@@ -1296,17 +1302,17 @@ opacity: 0.93;
     
 
   .header__nav-close {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     position: absolute;
-    top: 10px;
+    top: 15px;
     right: 20px;
     z-index: 11;
   }
   .header__nav-close-line {
     display: block;
     width: 100%;
-    height: 3px;
+    height: 2px;
     background-color: #fff;
     position: absolute;
     top: 50%;
@@ -1723,7 +1729,7 @@ opacity: 0.93;
     font-weight: 500;
     font-size: 14px;
     line-height: 24px;
-    color: #615f5f;
+    color: #000;
     margin-right: 55px;
   }
 }
