@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name=”robots” content=”noindex, follow”> <!-- запрет индексации сайта -->
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/jquery.fancybox.min.css" />
+
+    <link rel="stylesheet" href="/css/magnific-popup.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Твой каркасный дом</title>
+  </head>
+  <body>
+    <!-- Header -->
+    
+    <header class="header">
+      <div class="wrapper">
+        <div class="header__wrapper">
+          <div class="header__logo">
+            <a href="index.html" class="header__logo-link header__logo-linkbig">
+              <img
+                src="/images/logo.svg"
+                alt="Твой каркасный дом"
+                class="header__logo-pic"
+              />
+            </a>
+            <a href="index.html" class="header__logo-link header__logo-linksmall">
+              <img
+                src="/images/logo-small2.svg"
+                alt="Твой каркасный дом"
+                class="header__logo-pic"
+              />
+            </a>
+          </div>
+          <div class="header__nav-box">
+            <nav class="header__nav">
+              <ul class="header__list">
+                <li class="header__item">
+                  <a href="#about" class="header__link js-scroll">О нас</a>
+                </li>
+                <li class="header__item">
+                  <a href="#work" class="header__link js-scroll">
+                    Схема работы</a
+                  >
+                </li>
+                <li class="header__item">
+                  <a href="#project" class="header__link js-scroll">Проекты</a>
+                </li>
+                <li class="header__item">
+                  <a href="#advantages" class="header__link js-scroll"
+                    >Преимущества</a
+                  >
+                </li>
+                <li class="header__item">
+                  <a href="#faq" class="header__link js-scroll"
+                    >Ответы на вопросы</a
+                  >
+                </li>
+                <li class="header__item">
+                  <a href="#contacts" class="header__link js-scroll"
+                    >Контакты</a
+                  >
+                </li>
+              </ul>
+
+              <div class="header__nav-close">
+                <span class="header__nav-close-line"></span>
+                <span class="header__nav-close-line"></span>
+              </div>
+            </nav>
+          </div>
+
+          <div class="header__burger burger">
+            <span class="burger__line burger__line_first"></span>
+            <span class="burger__line burger__line_second"></span>
+            <span class="burger__line burger__line_third"></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- intro -->
+    <section class="intro" id="sign-in">
+      <div class="wrapper">
+        <div class="intro__inner">
+          <h1 class="intro__title">
+            Строительство каркасных домов
+          </h1>
+
+          <a class="intro__video" data-fancybox href="https://www.youtube.com/watch?v=03bO68EnWrA" >
+            <div class="intro__video-arrow"><svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="35" cy="35" r="35" fill="#FFC32D" /> <path d="M46 34.5L28.75 44.4593L28.75 24.5407L46 34.5Z" fill="white"/>
+              </svg>
+            </div>
+            <div class="intro__video-text">Смотреть видео</div>
+          </a>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- about -->
+    <div class="about" id="about">
+      <div class="wrapper">
+        <div class="about__inner">
+          <div class="about__inner-content">
+            <h3 class="about__title title">О нашей компании</h3>
+            <div class="about__text text">
+              <p>
+                Компания “Твой каркасный дом” предоставляет услуги по
+                проектированию и изготовлению каркасных домов, бань, коттеджей
+                по одному из уже разработанных качественных проектов или по
+                индивидуальному проекту, в котором учтены все пожелания
+                заказчика.
+              </p>
+              <br />
+              <p>
+                Мы реализуем все этапы строительства каркасного дома: от
+                подготовки площадки под фундамент, до внутренней отделки
+                помещений. Наша компания гарантирует строгое соблюдение
+                установленных сроков и конкурентные цены в строительстве
+                каркасного дома.
+              </p>
+              <br />
+              <p>
+                Мы возведем каркасный дом под ключ который готов к сборке, или
+                разработаем уникальный проект с учетом всех Ваших пожеланий.
+              </p>
+            </div>
+            <a class="about__btn js-scroll2" href="#about-btn"
+              >Получить бесплатную консультацию</a
+            >
+          </div>
+          <div class="about__inner-img">
+            <img src="/images/Rectangle8-min.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- work -->
+    <section class="work" id="work">
+      <div class="wrapper">
+        <h2 class="work__title title">Как мы работаем</h2>
+        <div class="work__inner">
+          <div class="work__item">
+            <div class="work__item-circle"></div>
+            <div class="work__item-block">
+              <div class="work__item-img">
+                <img src="/images/svg/Frame.svg" alt="Шаг 1" />
+              </div>
+              <h3 class="work__item-title title-small">Шаг 1</h3>
+              <p class="work__item-text text">
+                Оставляете заявку или звоните нам.
+              </p>
+            </div>
+          </div>
+          <div class="work__item">
+            <div class="work__item-circle"></div>
+            <div class="work__item-block">
+              <div class="work__item-img">
+                <img src="/images/svg/Frame11.svg" alt="" />
+              </div>
+              <h3 class="work__item-title title-small">Шаг 2</h3>
+              <p class="work__item-text text">
+                Рассматриваем ваш проект или предлагаем свой вариант. Обсуждаем
+                нюансы.
+              </p>
+            </div>
+          </div>
+          <div class="work__item">
+            <div class="work__item-circle"></div>
+            <div class="work__item-block">
+              <div class="work__item-img">
+                <img src="/images/svg/Frame3.svg" alt="" />
+              </div>
+              <h3 class="work__item-title title-small">Шаг 3</h3>
+              <p class="work__item-text text">
+                Составляем смету. Согласовываем, утверждаем и заключаем договор.
+              </p>
+            </div>
+          </div>
+          <div class="work__item">
+            <div class="work__item-circle"></div>
+            <div class="work__item-block">
+              <div class="work__item-img">
+                <img src="/images/svg/Frame4.svg" alt="" />
+              </div>
+              <h3 class="work__item-title title-small">Шаг 4</h3>
+              <p class="work__item-text text">
+                Начинаем строительство. Без предоплат за невыполненную работу.
+              </p>
+            </div>
+          </div>
+          <div class="work__item">
+            <div class="work__item-circle"></div>
+            <div class="work__item-block">
+              <div class="work__item-img">
+                <img src="/images/svg/Frame5.svg" alt="" />
+              </div>
+              <h3 class="work__item-title title-small">Шаг 5</h3>
+              <p class="work__item-text text">
+                Подписываем акт. Окончательный расчёт и передача ключей.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- project gallery -->
+
+    <section class="project" id="project">
+      <div class="wrapper">
+        <h2 class="project__title title">Последние выполненные проекты</h2>
+        <div class="project__gallery">
+          <div class="project__gallery-left">
+            <a
+              class="gallery"
+              href="/images/project1-big-min.jpg"
+              data-fancybox="images"
+              ><img class="img-big" src="/images/project1-min.jpg"
+            /></a>
+
+            
+            <a
+              class="gallery"
+              href="/images/project2-big-min.jpg"
+              data-fancybox="images"
+              ><img class="img-small" src="/images/project2-min.jpg"
+            /></a>
+            <a
+              class="gallery"
+              href="/images/project3-big-min.jpg"
+              data-fancybox="images"
+              ><img class="img-small" src="/images/project3-min.jpg"
+            /></a>
+          </div>
+          <div class="project__gallery-right">
+            <a
+              class="gallery"
+              href="/images/project4-big-min.jpg"
+              data-fancybox="images"
+              ><img class="img-small" src="/images/project4-min.jpg"
+            /></a>
+            <a
+              class="gallery"
+              href="/images/project5-big-min.jpg"
+              data-fancybox="images"
+              ><img class="img-small" src="/images/project5-min.jpg"
+            /></a>
+            <a
+              class="gallery"
+              href="/images/project6-big-min.jpg"
+              data-fancybox="images"
+              ><img class="img-big" src="/images/project6-min.jpg"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+   
+
+    <!-- contact -->
+    <section class="contact" id="about-btn">
+      <div class="wrapper">
+        <h2 class="contact__title title">
+          Оставьте заявку и мы свяжемся с вами
+        </h2>
+
+        <div class="contact__forms">
+          <form action="#" method="post" name="form">
+            <div class="form">
+              <input
+                type="hidden"
+                name="project_name"
+                value="Твой каркасный дом"
+              />
+              <input
+                type="hidden"
+                name="admin_email"
+                value="admin@address.com"
+              />
+              <input type="hidden" name="form_subject" value="Form Subject" />
+
+              <input
+                class="name"
+                name="name"
+                type="text"
+                placeholder="Введите Ваше имя"
+              />
+              <input type="text" class="phone" placeholder="Введите номер телефона"/>
+              
+
+              <button class="submit" href="#small-dialog" type="submit">
+                ОСтавить заявку
+              </button>
+
+              <div class="hidden">
+                <div
+                  class="submit__popup zoom-anim-dialog mfp-hide"
+                  id="small-dialog"
+                >
+                  <h2 class="submit__title">Ваша заявка принята!</h2>
+                  <p class="submit__text">
+                    Мы перезвоним Вам в течение 1 часа.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- advantages -->
+    <section class="advantages" id="advantages">
+      <div class="wrapper">
+        <div class="advantages__title title">Наши преимущества</div>
+        <div class="advantages__inner">
+          <div class="advantages__item">
+            <div class="advantages__item-circle"></div>
+            <div class="advantages__item-block">
+              <img
+                src="/images/svg/like (2) 1.svg"
+                alt="Качество"
+                class="advantages__img"
+              />
+              <h3 class="advantages__item-title title-small">Качество</h3>
+              <p class="advantages__item-text text">
+                Квалифицированные консультации. Профессиональный подход к делу.
+                Высокое качество исполнения работы.
+              </p>
+            </div>
+          </div>
+          <div class="advantages__item">
+            <div class="advantages__item-circle"></div>
+            <div class="advantages__item-block">
+              <img
+                src="/images/svg/exam 1.svg"
+                alt="Ответственность"
+                class="advantages__img"
+              />
+              <h3 class="advantages__item-title title-small">
+                Ответственность
+              </h3>
+              <p class="advantages__item-text text">
+                Предоставляем гарантии по договору. Имеем все разрешения для
+                осуществления строительной деятельности на территории РФ.
+              </p>
+            </div>
+          </div>
+          <div class="advantages__item">
+            <div class="advantages__item-circle"></div>
+            <div class="advantages__item-block">
+              <img
+                src="/images/svg/worker 1.svg"
+                alt="Опыт"
+                class="advantages__img"
+              />
+              <h3 class="advantages__item-title title-small">Опыт</h3>
+              <p class="advantages__item-text text">
+                Более 10 лет в каркасном строительстве. Готовы поделится своими
+                знаниями в работе с Вами.
+              </p>
+            </div>
+          </div>
+          <div class="advantages__item">
+            <div class="advantages__item-circle"></div>
+            <div class="advantages__item-block">
+              <img
+                src="/images/svg/hand 1.svg"
+                alt="Выгода"
+                class="advantages__img"
+              />
+              <h3 class="advantages__item-title title-small">Выгода</h3>
+              <p class="advantages__item-text text">
+                Сжатые сроки. Гибкая цена. Скидки и рассрочка на индивидуальных
+                условиях.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- faq -->
+    <div class="faq" id="faq">
+      <div class="wrapper">
+        <div class="accordion">
+          <h2 class="accordion__title title">
+            Ответы на часто задаваемые вопросы
+          </h2>
+          <div class="accordion__item">
+            <h3 class="accordion__item-title title-small">
+              Срок службы, долговечность каркасных зданий построенных по
+              технологии ЛСТК?
+            </h3>
+
+            <p class="accordion__text text">
+              Срок службы каркаса стен, перекрытий и кровли от 50 до 100 лет, и
+              зависит от характеристик оцинкованной стали, применяемой при
+              проектировании и монтаже. Например: толщина стали и класс
+              цинкования. Непосредственно срок службы материалов используемых
+              для обшивки и утепления здания и кровли, монтажа электропроводки,
+              систем отопления и водоснабжения, напрямую зависит от их
+              собственных свойств и качества отдельно взятого вида материала.
+            </p>
+          </div>
+          
+          <div class="accordion__item">
+            <h3 class="accordion__item-title title-small">
+              Экологичность и защищенность от неблагоприятных факторов, например
+              грызунов?
+            </h3>
+
+            <p class="accordion__text text">
+              Оцинкованная сталь разных характеристик, является основным
+              материалом при строительстве зданий по технологии ЛСТК.
+              Используется в каркасе несущих стен и межкомнатных перегородках, в
+              межэтажных перекрытиях, в каркасе кровли и кровельном покрытии.
+              Является биостойким материалом и благодаря химическому составу,
+              препятствует образованию грибков и плесени в несущих и ограждающих
+              конструкциях. Наполнитель стен и перекрытий на стадии производства
+              обрабатывается безопасными препаратами против плесени, грибков и
+              грызунов. Применяемые для строительства материалы нейтральны к
+              окружающей среде и не выделяют никаких вредных веществ, как при
+              строительстве, так и в течение всего срока эксплуатации.
+            </p>
+          </div>
+          <div class="accordion__item">
+            <h3 class="accordion__item-title title-small">
+              Насколько каркасные здания, построенные по технологии ЛСТК,
+              энергосберегающие?
+            </h3>
+
+            <p class="accordion__text text">
+              Да, обладают очень высокой энергоэффективностью! Конструктивные
+              особенности наружных стен и чердачных перекрытий, позволяют
+              максимально долго сохранить созданный внутри здания микроклимат и
+              препятствуют воздействию наружных неблагоприятных температурных
+              факторов. Стена толщиной всего 25см по теплотехническим
+              характеристикам соответствует кирпичной стене толщиной 1,5 метра.
+              Высокая герметичность и отсутствие деформации препятствует
+              образованию трещин (например, в деревянных каркасах), что влечет
+              за собой энергопотери, соответственно значительно снижает затраты
+              на отопление и кондиционирование.
+            </p>
+          </div>
+          <div class="accordion__item">
+            <h3 class="accordion__item-title title-small">
+              Варианты оплаты?
+            </h3>
+
+            <p class="accordion__text text">
+              Yes, we often take a small percentage of equity (shares) to offset
+              the total cost of a project so that we can continue to focus on
+              making your business idea a success.
+            </p>
+          </div>
+          <div class="accordion__item">
+            <h3 class="accordion__item-title title-small">
+              Сколько времени займет строительство?
+            </h3>
+
+            <p class="accordion__text text">
+              Yes, we have a large international team which can help support
+              your business growth; from further software development to
+              marketing.
+            </p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- our-contacts -->
+    <section class="our-contacts" id="contacts">
+      <div class="wrapper">
+        <h2 class="our-contacts__title title">Наши Контакты</h2>
+        <div class="our-contacts__inner">
+          <div class="our-contacts__item">
+            <div class="our-contacts__item-circle"></div>
+            <div class="our-contacts__item-block">
+              <div class="our-contacts__item-img">
+                <img src="/images/svg/phone-call (3) 1.svg" alt="Телефон" />
+              </div>
+              <h3 class="our-contacts__item-title title-small">Телефон</h3>
+
+              <a class="our-contacts__item-text text" href="tel:+74953255633"
+                >+8(495)325-56-33 Telegram, Whatsapp </a
+              >
+            </div>
+          </div>
+          <div class="our-contacts__item">
+            <div class="our-contacts__item-circle"></div>
+            <div class="our-contacts__item-block">
+              <div class="our-contacts__item-img">
+                <img src="/images/svg/email (1) 1.svg" alt="E-mail" />
+              </div>
+              <h3 class="our-contacts__item-title title-small">E-mail</h3>
+
+              <a class="our-contacts__item-text text" href="#!"
+                >info@tvoikarkas.ru</a
+              >
+            </div>
+          </div>
+
+          <div class="our-contacts__item">
+            <div class="our-contacts__item-circle"></div>
+            <div class="our-contacts__item-block">
+              <div class="our-contacts__item-img">
+                <img src="/images/svg//location (1) 1.svg" alt="Адрес" />
+              </div>
+              <h3 class="our-contacts__item-title title-small">Адрес</h3>
+              <p class="our-contacts__item-text text">
+                ст. Каневская ул. Минская, 16
+              </p>
+            </div>
+          </div>
+          
+
+          <div class="our-contacts__item">
+            <div class="our-contacts__item-circle"></div>
+            <div class="our-contacts__item-block">
+              <div class="our-contacts__item-img">
+                <img src="/images/svg/clock(4)1.svg" alt="Время работы" />
+              </div>
+              <h3 class="our-contacts__item-title title-small">Время работы</h3>
+              <p class="our-contacts__item-text text">
+                Понедельник - пятница 09:00 - 19:00
+              </p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- footer -->
+
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer__inner">
+          <div class="footer__logo">
+            <a href="/" class="footer__logo-link">
+              <img
+                class="footer__logo-pic"
+                src="/images/logo.svg"
+                alt="Твой каркасный дом"
+              />
+            </a>
+            <a href="#!" class="footer__logo-linksmall">
+              <img
+                src="/images/logo-small2.svg"
+                alt="Твой каркасный дом"
+                class="footer__logo-pic"
+              />
+            </a>
+          </div>
+          <div class="footer__text" id="myBtn">Политика конфиденциальности</div>
+           
+                
+                <div id="myModal" class="modal">
+
+                 
+                  <div class="modal-content">
+    <span class="close">&times;</span>
+    
+    <p>ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ </p><br>
+ 
+<p>
+      г. Город                                   «день» месяц Год г.
+      </p>
+      <br>
+      <p></p>
+      Настоящая Политика конфиденциальности персональных данных (далее – Политика конфиденциальности) действует в отношении всей информации, которую Интернет-магазин «Название»,
+      
+      расположенный на доменном имени адрес магазина, может получить о Пользователе во время использования сайта Интернет-магазина, программ и продуктов Интернет-магазина.
+    </p>
+    <br>
+    <p></p>
+      1. ОПРЕДЕЛЕНИЕ ТЕРМИНОВ
+    </p>
+    <br>
+      <p>
+      1.1 В настоящей Политике конфиденциальности используются следующие термины:
+      </p>
+      <p>1.1.1. «Администрация сайта Интернет-магазина (далее – Администрация сайта) » – уполномоченные сотрудники на управления сайтом, действующие от имени Название организации, которые организуют и (или) осуществляет обработку персональных данных, а также определяет цели обработки персональных данных, состав персональных данных, подлежащих обработке, действия (операции), совершаемые с персональными данными.</p>
+      <p>1.1.2. «Персональные данные» - любая информация, относящаяся к прямо или косвенно определенному или определяемому физическому лицу (субъекту персональных данных).</p>
+      <p>1.1.4. «Конфиденциальность персональных данных» - обязательное для соблюдения Оператором или иным получившим доступ к персональным данным лицом требование не допускать их распространения без согласия субъекта персональных данных или наличия иного законного основания.</p>
+      <p> 1.1.5. «Пользователь сайта Интернет-магазина (далее ? Пользователь)» – лицо, имеющее доступ к Сайту, посредством сети Интернет и использующее Сайт интернет-магазина.</p>
+      <p>1.1.6. «Cookies» — небольшой фрагмент данных, отправленный веб-сервером и хранимый на компьютере пользователя, который веб-клиент или веб-браузер каждый раз пересылает веб-серверу в HTTP-запросе при попытке открыть страницу соответствующего сайта.</p>
+      <p>1.1.7. «IP-адрес» — уникальный сетевой адрес узла в компьютерной сети, построенной по протоколу IP.</p>
+      <br>
+      <p>2. ОБЩИЕ ПОЛОЖЕНИЯ</p><br>
+      <p>2.1. Использование Пользователем сайта Интернет-магазина означает согласие с настоящей Политикой конфиденциальности и условиями обработки персональных данных Пользователя.
+      </p>
+      <p>2.2. В случае несогласия с условиями Политики конфиденциальности Пользователь должен прекратить использование сайта Интернет-магазина.</p>
+      <p>2.3.Настоящая Политика конфиденциальности применяется только к сайту Интернет-магазина Название магазина. Интернет-магазин не контролирует и не несет ответственность за сайты третьих лиц, на которые Пользователь может перейти по ссылкам, доступным на сайте Интернет-магазина.</p>
+      <p>2.4. Администрация сайта не проверяет достоверность персональных данных, предоставляемых Пользователем сайта Интернет-магазина.</p>
+      <p>Обновлено «день» месяц год г.</p>
+      
+      
+      
+                 </div>
+                 
+
+                </div> 
+
+          
+          <div class="footer__link">
+            <a class="footer__social" href="#!"
+              ><img src="/images/svg/insta.svg" alt="instagram"
+            /></a>
+            <a class="footer__social" href="#!"
+              ><img src="/images/svg/youtube.svg" alt="youtube"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/jquery.mask.min.js"></script>
+    <script src="/js/jquery.fancybox.min.js"></script>
+    <script src="/js/jquery.magnific-popup.min.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
