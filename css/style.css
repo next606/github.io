@@ -2394,7 +2394,7 @@ margin-left: 0px;
   }
 }
 @media (max-width: 615px){
-  a.contact__policy-link{
+  .contact__policy-link{
     padding-top: 5px;
   }
 }
