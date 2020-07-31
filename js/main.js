@@ -1,5 +1,5 @@
 /* header active */
-let elements = document.getElementsByClassName("header__item");
+/* let elements = document.getElementsByClassName("header__item");
 
     for (var i = 0; i < elements.length; i++){
         elements[i].onclick = function () {
@@ -10,29 +10,58 @@ let elements = document.getElementsByClassName("header__item");
             }
             this.classList.add("header__link-active");
         }
-    }
+    } */
 
     
     /* header active scroll */
+    
+
+
+
+
+    window.addEventListener('scroll', () => {
+      let scrollDistance = window.scrollY;
+    
+      
+        document.querySelectorAll('.section').forEach((el, i) => {
+          if (el.offsetTop - document.querySelector('.header__item').clientHeight <= scrollDistance) {
+            document.querySelectorAll('.header__nav a').forEach((el) => {
+              if (el.classList.contains('header__link-active')) {
+                el.classList.remove('header__link-active');
+              }
+            });
+    
+            document.querySelectorAll('.header__nav li')[i].querySelector('a').classList.add('header__link-active');
+          }
+        });
+        
+      
+    });
+
+
 
     /* 1 */
-    /* $(function () {
-      var location = window.location.href;
-      var cur_url = '/' + location.split('/').pop();
-   
-      $('.header__nav li').each(function () {
-          var link = $(this).find('a').attr('href');
-   
-          if (cur_url == link) {
-              $(this).addClass('header__link-active');
+    /* window.addEventListener('scroll', () => {
+      let scrollDistance = window.scrollY;
+    
+      if (window.innerWidth > 768) {
+        document.querySelectorAll('.section').forEach((el, i) => {
+          if (el.offsetTop - document.querySelector('.header__nav').clientHeight <= scrollDistance) {
+            document.querySelectorAll('.header__nav a').forEach((el) => {
+              if (el.classList.contains('header__link-active')) {
+                el.classList.remove('header__link-active');
+              }
+            });
+    
+            document.querySelectorAll('.header__nav li')[i].querySelector('a').classList.add('header__link-active');
           }
-      });
-  }); */
+        });
+      }
+    }); */
+    /* 2 */
+   /*  jQuery(function($) {
 
-/* 2 */
-    jQuery(function($) {
-
-      const section = $('.header__nav-box'),
+      const section = $('.section'),
             nav = $('.header__nav'),
             navHeight = nav.outerHeight(); 
       window.addEventListener('orientationchange', function () {
@@ -66,7 +95,7 @@ let elements = document.getElementsByClassName("header__item");
           return false;
       });
   
-  });
+  }); */
 
   /* accordion */
   
@@ -81,7 +110,7 @@ let elements = document.getElementsByClassName("header__item");
 
 
 
-/* header */
+/* header fixed */
 (function(){
     const header = document.querySelector('.header');
     window.onscroll = () => {

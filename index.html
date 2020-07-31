@@ -44,7 +44,7 @@
           </div>
           <div class="header__nav-box">
             <nav class="header__nav">
-              <ul class="header__list">
+              <ul class="header__list" >
                 <li class="header__item">
                   <a href="#about" class="header__link js-scroll">О нас</a>
                 </li>
@@ -124,7 +124,7 @@
     </section>
 
     <!-- about -->
-    <div class="about" id="about">
+    <div class="about section" id="about">
       <div class="wrapper">
         <div class="about__inner">
           <div class="about__inner-content">
@@ -163,7 +163,7 @@
     </div>
 
     <!-- work -->
-    <section class="work" id="work">
+    <section class="work section" id="work">
       <div class="wrapper">
         <h2 class="work__title title">Как мы работаем</h2>
         <div class="work__inner">
@@ -234,7 +234,7 @@
 
     <!-- project gallery -->
 
-    <section class="project" id="project">
+    <section class="project section" id="project">
       <div class="wrapper">
         <h2 class="project__title title">Последние выполненные проекты</h2>
         <div class="project__gallery">
@@ -284,7 +284,7 @@
     </section>
 
     <!-- contact -->
-    <section class="contact" id="about-btn">
+    <section class="contact section" id="about-btn">
       <div class="wrapper">
         <h2 class="contact__title title">
           Оставьте заявку и мы свяжемся с вами
@@ -293,6 +293,7 @@
         <div class="contact__forms">
           <form action="#" method="post" name="form">
             <div class="form">
+              <!-- hidden form  start-->
               <input
                 type="hidden"
                 name="project_name"
@@ -304,17 +305,17 @@
                 value="admin@address.com"
               />
               <input type="hidden" name="form_subject" value="Form Subject" />
-
+              <!-- hidden form  end-->
               <input
                 class="name"
                 name="name"
                 type="text"
-                placeholder="Введите Ваше имя"
+                placeholder="Введите Ваше имя" required
               />
               <input
                 type="text"
                 class="phone"
-                placeholder="Введите номер телефона"
+                placeholder="Введите номер телефона" required
               />
 
               <button class="submit" href="#small-dialog" type="submit">
@@ -347,7 +348,7 @@
     </section>
 
     <!-- advantages -->
-    <section class="advantages" id="advantages">
+    <section class="advantages section" id="advantages">
       <div class="wrapper">
         <div class="advantages__title title">Наши преимущества</div>
         <div class="advantages__inner">
@@ -418,7 +419,7 @@
     </section>
 
     <!-- faq -->
-    <div class="faq" id="faq">
+    <div class="faq section" id="faq">
       <div class="wrapper">
         <div class="accordion">
           <h2 class="accordion__title title">
@@ -499,7 +500,7 @@
     </div>
 
     <!-- our-contacts -->
-    <section class="our-contacts" id="contacts">
+    <section class="our-contacts section" id="contacts">
       <div class="wrapper">
         <h2 class="our-contacts__title title">Наши Контакты</h2>
         <div class="our-contacts__inner">
