@@ -1,4 +1,31 @@
+
+/* header active 0 */
+
+$(document).ready(function () {
+
+	$('.header__nav a[href^="#"]').click(function () {
+    
+    var offset = 90;
+		
+		var target = $(this).attr('href');
+		$('html, body').animate({
+			scrollTop: $(target).offset().top - offset
+		}, 500);
+		$('.header__nav a[href^="#"]').removeClass('header__link-active');
+		$(this).addClass('header__link-active');
+		return false;
+	});
+
+});
+
+
+
 /* header active */
+
+
+
+
+
 /* let elements = document.getElementsByClassName("header__item");
 
     for (var i = 0; i < elements.length; i++){
@@ -12,13 +39,17 @@
         }
     } */
 
+
+
+
+
     
     /* header active scroll */
     
 
+/* 0 */
 
-
-
+/* 
     window.addEventListener('scroll', () => {
       let scrollDistance = window.scrollY;
     
@@ -36,7 +67,7 @@
         });
         
       
-    });
+    }); */
 
 
 
@@ -153,7 +184,7 @@
 
 
 // Scroll to anchors main
-(function () {
+/* (function () {
 
   const smoothScroll = function (targetEl, duration) {
       const headerElHeight =  document.querySelector('.header').clientHeight;
@@ -190,11 +221,11 @@
       });
   };
   scrollTo();
-}());
+}()); */
 
 /* Scroll to anchors small */
 
-(function () {
+/* (function () {
 
   const smoothScroll = function (targetEl, duration) {
       const headerElHeight =  document.querySelector('.header').clientHeight;
@@ -231,7 +262,7 @@
       });
   };
   scrollTo();
-}());
+}()); */
 
 /* video */
 

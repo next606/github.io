@@ -141,10 +141,14 @@ body {
     border-bottom: 2px solid #ffc32d;
 }
 .header__link:hover,
-.header__link:focus,
 .header__link:active {
   opacity: 0.75;
 }
+/* .header__link:hover,
+.header__link:focus,
+.header__link:active {
+  opacity: 0.75;
+} */
 
 .header__burger {
   display: none;
