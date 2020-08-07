@@ -1,7 +1,104 @@
+/* header active -1 */
+
+/* 
+var lastId,
+
+    topMenu = $(".header__list"),
+
+    topMenuHeight = topMenu.outerHeight()+15,
+
+   
+
+    menuItems = topMenu.find("a"),
+
+    
+
+    scrollItems = menuItems.map(function(){
+
+      var item = $($(this).attr("href"));
+
+      if (item.length) { return item; }
+
+    });
+
+
+
+
+
+menuItems.click(function(e){
+
+  var href = $(this).attr("href"),
+
+      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+
+  $('html, body').stop().animate({ 
+
+      scrollTop: offsetTop
+
+  }, 300);
+
+  e.preventDefault();
+
+});
+
+
+
+
+
+$(window).scroll(function(){
+
+   
+
+   var fromTop = $(this).scrollTop()+topMenuHeight;
+
+   
+
+   
+
+   var cur = scrollItems.map(function(){
+
+     if ($(this).offset().top < fromTop)
+
+       return this;
+
+   });
+
+   
+
+   cur = cur[cur.length-1];
+
+   var id = cur && cur.length ? cur[0].id : "";
+
+   
+
+   if (lastId !== id) {
+
+       lastId = id;
+
+       
+
+       menuItems
+
+         .parent().removeClass("header__link-active")
+
+         .end().filter("[href='#"+id+"']").parent().addClass("header__link-active");
+
+   }                   
+
+});
+ */
+
+
+
+
+/* header active -1 end */
+
+
+
 
 /* header active 0 */
 
-$(document).ready(function () {
+/* $(document).ready(function () {
 
 	$('.header__nav a[href^="#"]').click(function () {
     
@@ -16,17 +113,13 @@ $(document).ready(function () {
 		return false;
 	});
 
-});
+}); */
 
 
 
 /* header active */
 
-
-
-
-
-/* let elements = document.getElementsByClassName("header__item");
+let elements = document.getElementsByClassName("header__item");
 
     for (var i = 0; i < elements.length; i++){
         elements[i].onclick = function () {
@@ -37,7 +130,7 @@ $(document).ready(function () {
             }
             this.classList.add("header__link-active");
         }
-    } */
+    }
 
 
 
@@ -46,11 +139,7 @@ $(document).ready(function () {
     
     /* header active scroll */
     
-
-/* 0 */
-
-/* 
-    window.addEventListener('scroll', () => {
+    /* window.addEventListener('scroll', () => {
       let scrollDistance = window.scrollY;
     
       
@@ -71,62 +160,7 @@ $(document).ready(function () {
 
 
 
-    /* 1 */
-    /* window.addEventListener('scroll', () => {
-      let scrollDistance = window.scrollY;
     
-      if (window.innerWidth > 768) {
-        document.querySelectorAll('.section').forEach((el, i) => {
-          if (el.offsetTop - document.querySelector('.header__nav').clientHeight <= scrollDistance) {
-            document.querySelectorAll('.header__nav a').forEach((el) => {
-              if (el.classList.contains('header__link-active')) {
-                el.classList.remove('header__link-active');
-              }
-            });
-    
-            document.querySelectorAll('.header__nav li')[i].querySelector('a').classList.add('header__link-active');
-          }
-        });
-      }
-    }); */
-    /* 2 */
-   /*  jQuery(function($) {
-
-      const section = $('.section'),
-            nav = $('.header__nav'),
-            navHeight = nav.outerHeight(); 
-      window.addEventListener('orientationchange', function () {
-          navHeight = nav.outerHeight();
-      }, false);
-  
-      $(window).on('scroll', function () {
-          const position = $(this).scrollTop();
-  
-          section.each(function () {
-              const top = $(this).offset().top - navHeight - 5,
-                    bottom = top + $(this).outerHeight();
-  
-              if (position >= top && position <= bottom) {
-                  nav.find('a').removeClass('header__link-active');
-                  section.removeClass('header__link-active');
-  
-                  $(this).addClass('header__link-active');
-                  nav.find('a[href="#' + $(this).attr('id') + '"]').addClass('header__link-active');
-              }
-          });
-      });
-  
-      nav.find('a').on('click', function () {
-          const id = $(this).attr('href');
-  
-          $('html, body').animate({
-              scrollTop: $(id).offset().top - navHeight
-          }, 500);
-  
-          return false;
-      });
-  
-  }); */
 
   /* accordion */
   
@@ -184,7 +218,7 @@ $(document).ready(function () {
 
 
 // Scroll to anchors main
-/* (function () {
+(function () {
 
   const smoothScroll = function (targetEl, duration) {
       const headerElHeight =  document.querySelector('.header').clientHeight;
@@ -221,11 +255,15 @@ $(document).ready(function () {
       });
   };
   scrollTo();
-}()); */
+}());
+
+
+
+
 
 /* Scroll to anchors small */
 
-/* (function () {
+(function () {
 
   const smoothScroll = function (targetEl, duration) {
       const headerElHeight =  document.querySelector('.header').clientHeight;
@@ -262,28 +300,13 @@ $(document).ready(function () {
       });
   };
   scrollTo();
-}()); */
+}());
 
 /* video */
 
 $('[data-fancybox]').fancybox({
 	protect: true
 });
-
-
-
-
-
-
-/* ----- */
-
-/* $('.card-deck a').fancybox({
-    caption : function( instance, item ) {
-      return $(this).parent().find('.card-text').html();
-    }
-  }); */
-
-
 
 
 
@@ -297,11 +320,98 @@ loop : true,
 
 });
 
-/* send form */
 
+
+/* send form 0 */
 $(document).ready(function() {
 
-	
+
+
+
+  $("form").submit(function() {
+  
+  var th = $(this);
+  
+  $.ajax({
+  
+  type: "POST",
+  
+  url: "mail.php",
+  
+  data: th.serialize()
+  
+  }).done(function() {
+  
+  // alert("Thank you!");
+  
+  
+  
+  $('.submit').magnificPopup({
+  
+  type: 'inline',
+  
+  
+  
+  fixedContentPos: false,
+  
+  fixedBgPos: true,
+  
+  
+  
+  overflowY: 'auto',
+  
+  
+  
+  closeBtnInside: true,
+  
+  preloader: false,
+  
+  
+  
+  midClick: true,
+  
+  removalDelay: 300,
+  
+  mainClass: 'my-mfp-zoom-in'
+  
+  }).magnificPopup('open');
+    
+  setTimeout(function() {
+    
+  th.trigger("reset");
+  
+  }, 1000);
+  
+  });
+  
+  return false;
+  
+  });
+  
+    
+  });
+
+/* send form */
+
+/* $(document).ready(function() {
+	$("form").submit(function() { 
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "mail.php", 
+			data: th.serialize()
+		}).done(function() {
+			
+			setTimeout(function() {
+				
+				th.trigger("reset");
+			}, 1000);
+		});
+		return false;
+	});
+
+}); */
+/* $(document).ready(function() {
 	$("form").submit(function() { 
 		var th = $(this);
 		$.ajax({
@@ -318,11 +428,11 @@ $(document).ready(function() {
 		return false;
 	});
 
-});
+}); */
 
 
 /* contact form */
-$(document).ready(function() {
+/* $(document).ready(function() {
 	$('.submit').magnificPopup({
 		type: 'inline',
 
@@ -340,25 +450,21 @@ $(document).ready(function() {
 	});
 
 });
-
+ */
 
 /* contact form mask */
 $('.phone').mask('+7 (000) 000-0000', {placeholder: "Введите номер телефона"});
-
-
 $('.crazy_cep').mask('00000-000', { onKeyPress: function (cep) {
   var masks = ['00000-000', '0-00-00-00'];
   mask = (cep.length>7) ? masks[1] : masks[0];
   $('.crazy_cep').mask(mask, this);
 }});
-
 $('.cpf').mask('000.000.000-00', {reverse: true});
 
 var SaoPauloCelphoneMask = function(phone, e, currentField, options){
   return phone.match(/^(\(?11\)? ?9(5[0-9]|6[0-9]|7[01234569]|8[0-9]|9[0-9])[0-9]{1})/g) ?
     '(00) 00000-0000' : '(00) 0000-0000';
 };
-
 $(".sp_celphones").mask('(00) 00009-0000', {placeholder: "( __ ) _____ - ____"});
 
 $(".bt-mask-it").click(function(){
@@ -369,27 +475,14 @@ $(".bt-mask-it").click(function(){
 /* footer policy */
 
 var modal = document.getElementById("myModal");
-
-
 var btn = document.getElementById("myBtn");
-
-
-
 var span = document.getElementsByClassName("close")[0];
-
-
-
-
 btn.onclick = function() {
   modal.style.display = "block";
 }
-
-
 span.onclick = function() {
   modal.style.display = "none";
 }
-
-
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
@@ -398,31 +491,7 @@ window.onclick = function(event) {
 
 
 
-/* var modal = document.getElementById("myModal");
 
-
-var btn = document.getElementById("myBtn");
-
-
-var span = document.getElementsByClassName("close")[0];
-
-
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-} 
- */
 
 
 
