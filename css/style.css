@@ -78,8 +78,6 @@ body {
   -webkit-transition: 0.2s linear;
   -o-transition: 0.2s linear;
   transition: 0.2s linear;
-  height: 80px;
-  
   z-index: 999;
   padding: 7px 0 7px 0;
 }
