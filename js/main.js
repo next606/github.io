@@ -102,8 +102,8 @@ $('.popular__slider').slick({
   infinite: true,
 speed: 600,
 slidesToShow: 3,
-/* autoplay: true,
-autoplaySpeed: 2500, */
+autoplay: true,
+autoplaySpeed: 2500,
 
 
 prevArrow:'<div class="arrowleft"><img src="/images/svg/arrowleft.svg" alt=""></div>',
