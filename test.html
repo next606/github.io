@@ -1,0 +1,153 @@
+$.ajax({
+
+    url: 'mail.php',
+    
+    type: 'POST',
+    
+    data: 'contactName=' + name + '&contactEmail=' + email + '&spam=' + spam,
+    
+    success: function(result) {
+    
+    //console.log(result);
+    
+    $('#results,#errors').remove();
+    
+    $('#contactWrapper').append('<p id="results">' + result + '</p>');
+    
+    $('#loading').fadeOut(500, function() {
+    
+    $(this).remove();
+    
+    
+    
+    });
+    
+    
+    
+    if ( /*no errors*/ ) {
+    
+    window.location='https://google.com/'
+    
+    }
+    
+    
+    
+    }
+    
+    });
+
+
+
+
+    /* send form 1 */
+$(document).ready(function() {
+
+
+
+
+  $("form").submit(function() {
+  
+  var th = $(this);
+  
+  $.ajax({
+  
+  type: "POST",
+  
+  url: "mail.php",
+  
+  data: th.serialize()
+  
+  }).done(function() {
+    
+    //console.log(result);
+    
+    $('#results,#errors').remove();
+    
+    $('#contactWrapper').append('<p id="results">' + result + '</p>');
+    
+    $('#loading').fadeOut(500, function() {
+    
+    $(this).remove();
+    
+    
+    
+    });
+    
+    
+    
+    if ( /*no errors*/ ) {
+    
+    window.location='https://google.com/'
+    
+    }
+    
+    
+    
+    }
+  });
+});
+  
+  
+
+<!-- send form 2 -->
+$("form").submit(function() {
+
+  var th = $(this);
+
+  $.ajax({
+  type: "POST",
+  url: "mail.php",
+  data: th.serialize()
+  }).done(function((result) {
+
+    if ( /*no errors*/ ) {
+    
+    window.location='https://google.com/'
+    
+    }
+    
+    }
+  });
+
+
+
+
+<!-- slider -->
+$('.popular__slider').slick({
+
+  arrows: true,
+
+  /* dots: true, */
+
+infinite: true,
+
+speed: 600,
+
+slidesToShow: 3,
+
+prevArrow:'<div class="arrowleft"><img src="/images/svg/arrowleft.svg" alt=""></div>',
+
+nextArrow:'<div class="arrowright"><img src="/images/svg/arrowright.svg" alt=""></div>',
+
+responsive: [
+
+  {
+
+    breakpoint: 1000,
+
+    settings: {
+
+      slidesToShow: 2,
+
+      slidesToScroll: 1,
+
+      infinite: true,
+      arrows: true,
+    }
+
+  },
+
+
+]
+
+});
